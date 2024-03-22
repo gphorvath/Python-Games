@@ -28,6 +28,9 @@ else:
         print(shark)
         print("After a short time swimming, your are killed by a shark.")
     else:
+        colors = ["yellow", "red", "blue"]
+        rand_color = random.choice(colors)
+        colors.remove(rand_color)
         print("You pause for a minute, looking around...")
         print("Tucked behind a nearby bush you find a small boat.")
         print(boat)
@@ -35,39 +38,34 @@ else:
         input("Row! (Type anything)\n")
         print("On the island you find a house with 3 doors. One red, one yellow and one blue.")
         print(three_doors)
-        color = input("Which colour do you choose to open? (Type 'red', 'yellow', or 'blue')\n")
+        color_choice = input("Which colour do you choose to open? (Type 'red', 'yellow', or 'blue')\n")
         print(light)
         print("But wait... a feeling comes over you!")
-        if (color == "red"):
-            print("The blue door is most certainly a trap!")
-            if (input("Would you like to change doors? (Type 'yes' or 'no')\n") == "yes"):
-                color = "yellow"
-        elif (color == "blue"):
-            print("You are certain that the red door is a trap!")
-            if (input("Would you like to change doors? (Type 'yes' or 'no')\n") == "yes"):
-                color = "yellow"
-        elif (color == "yellow"):
+        if (color_choice == rand_color):
             rand = random.randint(0, 1)
-            if (rand == 0):
-                print("The blue door is most certainly a trap!")
-                if (input("Would you like to change doors? (Type 'yes' or 'no')\n") != "no"):
-                    color = "red"
-            else:
-                print("You are certain that the red door is a trap!")
-                if (input("Would you like to change doors? (Type 'yes' or 'no')\n") != "no"):
-                    color = "blue"
+            print(f"The {colors[rand]} door is most certainly a trap!")
+            if (input("Would you like to change doors? (Type 'yes' or 'no')\n") != "no"):
+                color_choice=colors[1-rand]
+        elif (color_choice == colors[0]):
+            print(f"The {colors[1]} door is most definitely a trap!")
+            if (input("Would you like to change doors? (Type 'yes' or 'no')\n") == "yes"):
+                color_choice = rand_color
+        elif (color_choice == colors[1]):
+            print(f"The {colors[0]} door is most assuredly a trap!")
+            if (input("Would you like to change doors? (Type 'yes' or 'no')\n") == "yes"):
+                color_choice = rand_color
         else:
-            color = " "
+            color_choice = " "
 
-        if (color == "red"):
+        if (color_choice == colors[0]):
             print(fire)
             print("As you reach for the door, you fall through a trap door!")
             print("You were slain in a pit of fire!")
-        elif (color == "blue"):
+        elif (color_choice == colors[1]):
             print(monster)
             print("As you reach for the door, the door bursts open!")
             print("You are slain by a monster!")
-        elif (color == "yellow"):
+        elif (color_choice == rand_color):
             print(treasure_chest)
             print("You discovered the treasure!")
             
