@@ -39,3 +39,12 @@ python game.py # also try python3
 ## Credits:
 
  - ASCII Art Courtesy of <https://ascii.co.uk/art>
+
+## More Information:
+
+<details>
+<summary>SPOILER ALERT</summary>
+
+The final stage is randomized and based off of the [Monty Hall Problem](https://en.wikipedia.org/wiki/Monty_Hall_problem).
+
+</details>
