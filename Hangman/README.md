@@ -25,3 +25,7 @@
 : :         \ \       : : 
 . .          `'       . .
 ```
+
+## Description
+
+The classic! Guess the letters in a random word and try not to get hanged!
