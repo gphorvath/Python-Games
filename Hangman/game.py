@@ -2,6 +2,7 @@ import random
 import os
 from art_pack import (
     stages,
+    logo,
     win_stage,
     lose_stage,
 )
@@ -18,7 +19,7 @@ game_over = False
 
 while not game_over:
     os.system("clear")
-    print("Welcome to Hangman!")
+    print(logo)
     print(stages[lives])
     print(display)
     print("\n")
@@ -30,8 +31,6 @@ while not game_over:
 
     if not letter in answer:
         lives -= 1
-        print(stages[lives])
-        print(display)
         
     if "_" not in display:
         os.system("clear")
