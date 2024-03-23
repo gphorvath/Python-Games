@@ -5,6 +5,7 @@ from art_pack import (
     fire,
     island,
     light,
+    logo,
     monster,
     shark,
     three_doors,
@@ -13,8 +14,9 @@ from art_pack import (
     treasure_map, 
 )
 
+os.system("clear")
+print(logo)
 print(island)
-print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 print("You are at a crossroad. Where do you want to go?")
 if input("Type 'left' or 'right'\n") != "left":
