@@ -23,23 +23,6 @@
 
 A simple text based adventure game to find the treasure!
 
-## Prerequisites:
-
-- Python installed
-- A terminal
-
-## Instructions
-
-From your terminal:
-
-``` bash
-python game.py # also try python3
-```
-
-## Credits:
-
- - ASCII Art Courtesy of <https://ascii.co.uk/art>
-
 ## More Information:
 
 <details>

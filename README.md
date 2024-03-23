@@ -15,3 +15,27 @@
         \/      \/     \/     \/     \/     \/  /_____/     \/     \/     \/ 
 
 ```
+
+## Description
+
+Some random python games.
+
+## Prerequisites:
+
+- Python installed
+- A terminal
+
+## Instructions
+
+From your terminal:
+
+``` bash
+cd <directory> # of your chosen game
+
+python game.py # might be python3 if alias isn't setup
+```
+
+## Credits:
+
+ - <https://ascii.co.uk/art>
+ - <https://patorjk.com/software/taag/>
