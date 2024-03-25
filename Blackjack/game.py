@@ -77,7 +77,7 @@ def game_loop():
         elif action == "stand":
             break
         else:
-            print("Invalid action")
+            print("Invalid action, please type 'hit' or 'stand'.")
             
     if hand_value(player_hand) > 21:
         print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)
