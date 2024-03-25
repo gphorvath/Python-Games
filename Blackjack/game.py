@@ -60,46 +60,46 @@ def print_game_state(player_hand, dealer_hand):
 def game_loop():
     deck = new_deck()
     shuffle_deck(deck)
-    dealer_hand1 = []
-    player_hand1 = []
+    dealer_hand = []
+    player_hand = []
     
     # Starting hands
-    dealer_hand1.append(deal_card(deck))
-    player_hand1.append(deal_card(deck))
-    player_hand1.append(deal_card(deck))
-    print_game_state(player_hand=player_hand1, dealer_hand=dealer_hand1)
+    dealer_hand.append(deal_card(deck))
+    player_hand.append(deal_card(deck))
+    player_hand.append(deal_card(deck))
+    print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)
     
-    while hand_value(player_hand1) < 21:
+    while hand_value(player_hand) < 21:
         action = input("Do you want to hit or stand? ").lower()
         if action == "hit":
-            player_hand1.append(deal_card(deck))
-            print_game_state(player_hand=player_hand1, dealer_hand=dealer_hand1)
+            player_hand.append(deal_card(deck))
+            print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)
         elif action == "stand":
             break
         else:
             print("Invalid action")
             
-    if hand_value(player_hand1) > 21:
-        print_game_state(player_hand=player_hand1, dealer_hand=dealer_hand1)
+    if hand_value(player_hand) > 21:
+        print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)
         print(bust)
     else:
-        while hand_value(dealer_hand1) < 17:
-            dealer_hand1.append(deal_card(deck))
-            print_game_state(player_hand=player_hand1, dealer_hand=dealer_hand1)            
-        if hand_value(dealer_hand1) > 21:
-            print_game_state(player_hand=player_hand1, dealer_hand=dealer_hand1)
+        while hand_value(dealer_hand) < 17:
+            dealer_hand.append(deal_card(deck))
+            print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)            
+        if hand_value(dealer_hand) > 21:
+            print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)
             print(win)
             print("Dealer busts! You win!")
-        elif hand_value(dealer_hand1) > hand_value(player_hand1):
-            print_game_state(player_hand=player_hand1, dealer_hand=dealer_hand1)
+        elif hand_value(dealer_hand) > hand_value(player_hand):
+            print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)
             print(lose)
             print("Dealer wins!")
-        elif hand_value(dealer_hand1) < hand_value(player_hand1):
-            print_game_state(player_hand=player_hand1, dealer_hand=dealer_hand1)
+        elif hand_value(dealer_hand) < hand_value(player_hand):
+            print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)
             print(win)
             print("You win!")
         else:
-            print_game_state(player_hand=player_hand1, dealer_hand=dealer_hand1)
+            print_game_state(player_hand=player_hand, dealer_hand=dealer_hand)
             print("It's a tie!")
     
     if(input("Do you want to play again? (yes or no): ").lower() == "yes"):
