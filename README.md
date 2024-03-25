@@ -35,7 +35,7 @@ cd <directory> # of your chosen game
 python game.py # might be python3 if alias isn't setup
 ```
 
-## Credits:
+## Credits
 
  - <https://ascii.co.uk/art>
  - <https://patorjk.com/software/taag/>
