@@ -20,7 +20,7 @@
 
 Some random python games.
 
-## Prerequisites:
+## Prerequisites
 
 - Python installed
 - A terminal
@@ -37,5 +37,6 @@ python game.py # might be python3 if alias isn't setup
 
 ## Credits
 
- - <https://ascii.co.uk/art>
- - <https://patorjk.com/software/taag/>
+- <https://ascii.co.uk/art>
+- <https://patorjk.com/software/taag/>
+- [Open Trivia Database](https://opentdb.com/)
