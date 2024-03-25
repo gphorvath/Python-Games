@@ -1,6 +1,10 @@
 import random
 import os
-from art import logo
+from art import (
+    logo,
+    win,
+    lose,
+)
 
 EASY_LEVEL_ATTEMPTS = 10
 HARD_LEVEL_ATTEMPTS = 5
@@ -23,6 +27,7 @@ def get_guess():
 
 def check_guess(guess, number, attempts):
     if guess == number:
+        print(win)
         print(f"Congratulations! The number was {number}.")
         return attempts
     elif guess < number:
@@ -46,6 +51,7 @@ def game_loop():
         guess = get_guess()
         attempts = check_guess(guess, number, attempts)
         if attempts == 0:
+            print(lose)
             print("You've run out of guesses, you lose.")
             break
             
