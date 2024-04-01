@@ -29,3 +29,7 @@ pip install requirements.txt
 make setup-ollama
 python game.py
 ```
+
+## Considerations
+
+The responses of the character are often lacking context and vary dramatically in revealing the clues. There are a lot of ways to improve upon this game.
