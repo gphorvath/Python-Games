@@ -25,6 +25,7 @@ This one requires a little more setup.
 
 ``` bash
 python -m venv .venv
+source .venv/bin/activate
 pip install requirements.txt
 python main.py
 ```
