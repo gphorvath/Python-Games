@@ -82,6 +82,8 @@ def game_loop():
             print(f"The suspect's name is {win_condition.name}, they stole {win_condition.item} and hid it in the {win_condition.location}.")
             if(input("Would you like to play again? (Type 'yes' or 'no'): ").lower() == "yes"):
                 return game_loop()
+            else:
+                return print("Thanks for playing!")
             
 if __name__ == "__main__":    
     game_loop()
