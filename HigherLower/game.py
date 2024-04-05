@@ -46,5 +46,5 @@ def game_loop(score):
         print(f"Sorry, that's wrong. Final score: {score}")
         return
         
-game_loop(0)
-    
+if __name__ == "__main__":
+    game_loop(0)

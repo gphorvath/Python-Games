@@ -55,9 +55,9 @@ def game_loop():
             print("You've run out of guesses, you lose.")
             break
             
-    if input("Do you want to play again? Type 'yes' or 'no': ").lower() == 'yes':
+    if "y" in input("Do you want to play again? Type 'yes' or 'no': ").lower():
         game_loop()
         
-        
-game_loop()
+if __name__ == "__main__":
+    game_loop()
     
